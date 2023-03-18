@@ -1,6 +1,4 @@
-# Queues
-
-## Introduction
+# Queues Introduction
 
 ## Performance
 
