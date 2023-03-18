@@ -1,4 +1,6 @@
-# Sets Introduction
+# Sets
+
+## Introduction
 
 ## Performance
 

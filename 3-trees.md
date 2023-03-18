@@ -1,4 +1,6 @@
-# Trees Introduction
+# Trees
+
+## Introduction
 
 ## Performance
 
