@@ -2,7 +2,7 @@
 
 A queue follows a "First In, First Out" (FIFO) ordering principle, meaning that the first element added to the queue will be the first one to be removed from the queue. This is also known as "First Come, First Serve" in many real-world applications. A queue can be implemented in Python by using a list.
 ```python
-# Creation of an empty list
+# Creation of an empty list, this will act as our queue.
 my_list = []
 ```
 
@@ -10,7 +10,7 @@ my_list = []
 
 - Enqueue: Add an item to the end of the queue. This operation has an efficiency of O(1).
 ```python
-# Creation of an empty list
+# Empty list
 my_list = []
 # Item you want to enqueue
 item = "me"
@@ -36,7 +36,7 @@ size = len(my_list)
 
 - isEmpty: Also involves checking the size of the queue and then comparing the value with 0 to return a boolean value. Since this is the same as the 'Size' function mentioned above, it also has an efficiency of O(1).
 ```python
-# Creation of an empty list
+# Empty list
 my_list = []
 # Check if the list size is equal to zero
 if len(my_list) == 0:
