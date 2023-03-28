@@ -10,48 +10,67 @@ my_list = []
 
 - `Enqueue`: Add an item to the end of the queue. This operation has an efficiency of O(1).
 ```python
-# Empty list
-my_list = []
+# Empty queue
+my_queue = []
 # Item you want to enqueue
 item = "me"
 # Enqueue operation
-my_list.append(item)
+my_queue.append(item)
 ```
 
-
-- `Dequeue`: Remove an item from the front of the queue. Because a list requires all items to be shifted forward after one is removed, this operation has an efficiency of O(n).
+- `Dequeue`: Remove an item from the front of the queue. Because a python list requires all items to be shifted forward after one is removed, this operation has an efficiency of O(n).
 ```python
-# List with items in it
-my_list = ["me","you"]
+# Queue with items in it
+my_queue = ["me","you"]
 # Dequeue and save the item in a variable for further use
-item = my_list.pop()
+item = my_queue.pop()
 ```
-
 
 - `Size`: Check and return the length of the queue. Because python stores the length of a list in a separate variable automatically when a list is created or updated, this operation has an efficiency of O(1).
 ```python
-# List with items in it
-my_list = ["me","you"]
-# Check the list size and save it in a variable for further use
-size = len(my_list)
+# Queue with items in it
+my_queue = ["me","you"]
+# Check the queue size and save it in a variable for further use
+size = len(my_queue)
 ```
-
 
 - `isEmpty`: Also involves checking the size of the queue and then comparing the value with 0 to return a boolean value. Since this is the same as the 'Size' function mentioned above, it also has an efficiency of O(1).
 ```python
-# Empty list
-my_list = []
-# Check if the list size is equal to zero
-if len(my_list) == 0:
+# Empty queue
+my_queue = []
+# Check if the queue size is equal to zero
+if len(my_queue) == 0:
     print("The list is empty.")
 ```
 
 ## Applications
 
-- A real world example of a queue would be a line for tickets at a movie theater. The teller assists people to purchase their tickets one at a time, in the same order in which people arrived.
+Queues can be used in a wide variety of applications. Some examples include:
+- `Scheduling Tasks`: In task scheduling applications, queues can be used to manage the order in which tasks are executed. Each task can be added to the queue, and the tasks can be executed in the order that they were added.
+- `Event-driven programming`: In event-driven programming, queues can be used to manage events and callbacks. When an event occurs, it can be added to the queue, and the callbacks associated with that event can be executed in order.
+- `Web server requests`: In web server applications, requests from clients can be added to a queue to be processed by the server. This allows the server to handle a large number of requests simultaneously without overwhelming the system.
 
 ## Example
+- Suppose you are building a program to simulate a printing queue for a printer. The printer can only print one document at a time, so if multiple documents are waiting to be printed, they must be queued up and printed in order.
+
+```python
+# Create the empty queue
+print_queue = []
+
+# Add a few documents to the printing queue
+print_queue.append("homework.pdf")
+print_queue.append("grocery_list.pdf")
+print_queue.append("tax_return.pdf")
+
+# Dequeue a document from the list to simulate completion of printing
+print_queue.pop()
+
+# Check the size of our queue to verify the homework document was removed
+print(len(print_queue))
+```
 
 ## Problem
+
+[View Solution](solutions/1-queues.py)
 
 [Back to Welcome Page](0-welcome.md)
