@@ -71,6 +71,14 @@ print(len(print_queue))
 
 ## Problem
 
+Suppose you are building a program to simulate a customer service queue for a call center. The call center has multiple customer service representatives, but when all representatives are busy, incoming calls must be queued up and handled in order.
+
+If multiple representatives become available at the same time, the call should be assigned to the representative who has been idle for the longest amount of time.
+
+Your program should keep track of the call queue using a Python list implemented as a queue.
+
+`Hint`: Using a queue for the representatives would easily allow you to determine who has been waiting the longest, as they will be first in the queue.
+
 [View Solution](solutions/1-queues.py)
 
 [Back to Welcome Page](0-welcome.md)
