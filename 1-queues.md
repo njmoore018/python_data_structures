@@ -77,7 +77,7 @@ If multiple representatives become available at the same time, the call should b
 
 Your program should keep track of the call queue using a Python list implemented as a queue.
 
-`Hint`: Using a queue for the representatives would easily allow you to determine who has been waiting the longest, as they will be first in the queue.
+`Hint`: Using a queue for the representatives would easily allow you to determine who has been idle the longest, as they will be first in the queue.
 
 [View Solution](solutions/1-queues.py)
 
