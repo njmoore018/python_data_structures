@@ -1,13 +1,138 @@
-# Trees
+# Trees Introduction
+A tree is a data structure consisting of nodes connected by edges. Each node in a tree can have multiple child nodes but has only one parent node, except for the root node which has no parent. Trees are used to represent hierarchical structures, such as the file system of a computer or the structure of a company and can be created in Python by using classes.
+Here's an example of a tree class:
+```python
+# Tree Class
+class Tree:
+    # Node class since a tree must be made of nodes
+    class Node:
+        def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
 
-## Introduction
+    def __init__(self):
+        root = None
+```
 
-## Performance
+### Commonly Used Terms
+- `Node`: A single unit of data that contains a value and one or more child nodes.
+
+- `Root`: The topmost node in a tree. It has no parent nodes.
+
+- `Parent`: A node that has one or more child nodes.
+
+- `Child`: A node that has a parent node.
+
+- `Leaf`: A node that has no children.
+
+- `Branch`: A non-leaf node.
+
+- `Level`: The distance between a node and the root node, where the root node is at level 0.
+
+## Common Functions and Performance
+- `Insert`: Add a node to the tree. The efficiency of this operation depends on the implementation of the tree but is generally O(log n) for a balanced tree and O(n) for an unbalanced tree.
+
+- `Remove`: Remove a node from the tree. This operation has an efficiency of O(log n) in a balanced tree, where n is the number of nodes in the tree.
+
+- `Traverse Forward`: Traverse the tree in ascending order. This operation has an efficiency of O(n), where n is the number of nodes in the tree.
+
+- `Traverse Backward`: Traverse the tree in descending order. This operation has an efficiency of O(n), where n is the number of nodes in the tree.
+
+- `Membership`: Check if a value is present in the tree. This operation has an efficiency of O(log n) in a balanced tree, where n is the number of nodes in the tree.
+
+- `Search`: Find a node in the tree. The efficiency of this operation depends on the implementation of the tree but is generally O(log n) for a balanced tree and O(n) for an unbalanced tree.
+
+- `Find Height`: Determine the height of the tree. This operation has an efficiency of O(n), where n is the number of nodes in the tree.
+
+- `Size`: Find the number of nodes in the tree. The efficiency of this operation depends on the implementation of the tree but is generally O(n).
 
 ## Applications
+Trees can be used in a wide variety of applications. Some examples include:
+
+- `File Systems`: In a file system, directories and files can be represented using a tree structure, where the root node represents the top-level directory, and each child node represents a subdirectory or file within that directory.
+
+- `Organization Charts`: In an organization, the hierarchy of employees can be represented using a tree structure, where the root node represents the CEO, and each child node represents a manager or employee within the organization.
+
+- `Decision Trees`: In machine learning, decision trees can be used to represent a sequence of decisions that lead to a particular outcome. Each node in the tree represents a decision, and the branches represent the possible outcomes of that decision.
 
 ## Example
+Given a binary tree, determine if it is a valid binary search tree (BST).
+
+A BST is a binary tree where the left subtree of a node contains only nodes with values less than the node's value, and the right subtree of a node contains only nodes with values greater than the node's value. Also, each left and right subtree must also be a valid BST.
+
+For example, the following binary tree is a valid BST:
+```markdown
+    5
+   / \
+  3   7
+ / \   \
+2   4   8
+```
+
+But the following binary tree is not a valid BST:
+```markdown
+    5
+   / \
+  3   7
+ / \   \
+2   8   4
+```
+
+Using our tree class from earlier, we will traverse over each node by using recursion and verify that the left value is less than the current value and the right value is greater. If we find an instance where this is not true, then the tree is not valid.
+```python
+# Tree Class
+class Tree:
+    # Node class since a tree must be made of nodes
+    class Node:
+        def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+
+    def __init__(self):
+        root = None
+
+    def is_valid_tree(self):
+        if root is None:
+            return True
+        else:
+            if root.left is not None:
+                if root.left.value > root.value:
+                    return False
+                else:
+                    return _is_valid_tree(root.left)
+            if root.right is not None:
+                if root.right.value < root.value:
+                    return False
+                else:
+                    return _is_valid_tree(root.right)
+
+    def _is_valid_tree(self, node):
+        if node.right is not None:
+            if node.right.value < node.value:
+                    return False
+                else:
+                    return _is_valid_tree(node.right)
+        if node.left is not None:
+            if node.left.value < node.value:
+                    return False
+                else:
+                    return _is_valid_tree(node.left)
+        return True
+```
 
 ## Problem
+Suppose you are building a file system that stores directories and files. You want to implement this system using a tree data structure. Each directory can have multiple subdirectories, and each directory and subdirectory can contain multiple files. Each file has a name and a size.
+
+You need to write a program that can do the following:
+
+- Add a new directory to the tree
+- Add a new file to a specified directory
+- Print out the contents of a specified directory
+- Delete a specified file from a specified directory
+- Delete a specified directory and all of its contents
+
+[View Solution](solutions/3-trees.py)
 
 [Back to Welcome Page](0-welcome.md)
