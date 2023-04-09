@@ -1,5 +1,4 @@
 # Python Data Structures Tutorials
-
 Welcome to the Python Data Structures Tutorials. Here you will learn about these three structures and how to use them:
 
 - [Queues](1-queues.md)
