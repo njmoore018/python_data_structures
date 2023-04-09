@@ -21,7 +21,7 @@ my_queue.append(item)
 # Queue with items in it
 my_queue = ["me","you"]
 # Dequeue and save the item in a variable for further use
-item = my_queue.pop()
+item = my_queue.pop(0)
 ```
 
 - `Size`: Check and return the length of the queue. Because python stores the length of a list in a separate variable automatically when a list is created or updated, this operation has an efficiency of O(1).
