@@ -1,5 +1,4 @@
 # Queues Introduction
-
 A queue follows a "First In, First Out" (FIFO) ordering principle, meaning that the first element added to the queue will be the first one to be removed from the queue. This is also known as "First Come, First Serve" in many real-world applications. A queue can be implemented in Python by using a list.
 ```python
 # Creation of an empty list, this will act as our queue
@@ -7,7 +6,6 @@ my_list = []
 ```
 
 ## Common Functions and Performance
-
 - `Enqueue`: Add an item to the end of the queue. This operation has an efficiency of O(1).
 ```python
 # Empty queue
@@ -44,15 +42,13 @@ if len(my_queue) == 0:
 ```
 
 ## Applications
-
 Queues can be used in a wide variety of applications. Some examples include:
 - `Scheduling Tasks`: In task scheduling applications, queues can be used to manage the order in which tasks are executed. Each task can be added to the queue, and the tasks can be executed in the order that they were added.
 - `Event-driven programming`: In event-driven programming, queues can be used to manage events and callbacks. When an event occurs, it can be added to the queue, and the callbacks associated with that event can be executed in order.
 - `Web server requests`: In web server applications, requests from clients can be added to a queue to be processed by the server. This allows the server to handle a large number of requests simultaneously without overwhelming the system.
 
 ## Example
-- Suppose you are building a program to simulate a printing queue for a printer. The printer can only print one document at a time, so if multiple documents are waiting to be printed, they must be queued up and printed in order.
-
+Suppose you are building a program to simulate a printing queue for a printer. The printer can only print one document at a time, so if multiple documents are waiting to be printed, they must be queued up and printed in order.
 ```python
 # Create the empty queue
 print_queue = []
