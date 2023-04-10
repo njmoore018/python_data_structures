@@ -1,4 +1,5 @@
 # Trees Introduction
+![Tree](/images/tree.jpg)
 A tree is a data structure consisting of nodes connected by edges. Each node in a tree can have multiple child nodes but has only one parent node, except for the root node which has no parent. Trees are used to represent hierarchical structures, such as the file system of a computer or the structure of a company and can be created in Python by using classes.
 Here's an example of a tree class:
 ```python
@@ -48,6 +49,7 @@ class Tree:
 - `Size`: Find the number of nodes in the tree. The efficiency of this operation depends on the implementation of the tree but is generally O(n).
 
 ## Applications
+![Company Meeting](/images/company_meeting.jpg)
 Trees can be used in a wide variety of applications. Some examples include:
 
 - `File Systems`: In a file system, directories and files can be represented using a tree structure, where the root node represents the top-level directory, and each child node represents a subdirectory or file within that directory.

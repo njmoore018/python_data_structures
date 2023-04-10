@@ -1,4 +1,5 @@
 # Sets Introduction
+![Playing Cards](/images/playing_cards.jpg)
 A set is an unordered collection of unique elements in Python. It can be implemented in Python using the set() function or using curly braces {}.
 Here's how to create an empty set:
 ```python
@@ -61,6 +62,7 @@ set3 = set1.intersection(set2)
 ```
 
 ## Applications
+![Computer with Code](/images/programming.jpg)
 Sets can be used in a wide variety of applications. Some examples include:
 
 - `Checking for duplicates`: Since sets only allow unique elements, they can be used to quickly and easily check for duplicates in a collection of data.
