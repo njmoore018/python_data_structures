@@ -123,15 +123,20 @@ class Tree:
 ```
 
 ## Problem
-Suppose you are building a file system that stores directories and files. You want to implement this system using a tree data structure. Each directory can have multiple subdirectories, and each directory and subdirectory can contain multiple files. Each file has a name and a size.
+Suppose you are given a binary search tree and you want to find the nth smallest element in the tree. Write a Python function that takes in the root of the tree and an integer n, and returns the nth smallest element in the tree.
 
-You need to write a program that can do the following:
+For example, suppose you have the following binary search tree:
+```markdown
+    5
+   / \
+  3   7
+ / \   \
+2   4   8
+```
 
-- Add a new directory to the tree
-- Add a new file to a specified directory
-- Print out the contents of a specified directory
-- Delete a specified file from a specified directory
-- Delete a specified directory and all of its contents
+If n=3, the function should return 4, since 4 is the third smallest element in the tree. If n=5, the function should return 7, since 7 is the fifth smallest element in the tree.
+
+`Hint`: One approach to solving this problem is to perform an inorder traversal of the tree, which will visit the elements in ascending order. You can keep track of the current position in the traversal and return the nth element when you reach it.
 
 [View Solution](solutions/3-trees.py)
 
